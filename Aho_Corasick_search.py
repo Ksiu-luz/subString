@@ -43,7 +43,7 @@ def create_ac_statemachine(substring):
     return root
 
 
-def aho_corasick_search(string, substring):
+def search(string, substring):
     """
     Алгоритм Ахо-Корасик для поиска подстроки в строке.
     Параметры:

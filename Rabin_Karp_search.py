@@ -1,7 +1,7 @@
 import hashlib
 
 
-def rabin_karp_search(string, substring, hash_func=hash):
+def search(string, substring, hash_func=hash):
     """
     Алгоритм Рабин-Карп поиска подстроки в строке с использованием произвольных типов хэширования.
     Параметры:

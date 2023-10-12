@@ -1,4 +1,4 @@
-def kmp_search(string, substring):
+def search(string, substring):
     """
     Алгоритм Кнут-Моррис-Пратт поиска подстроки в строке.
     Параметры:

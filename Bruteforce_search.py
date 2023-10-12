@@ -1,4 +1,4 @@
-def bruteforce_search(string, substring):
+def search(string, substring):
     """
     Алгоритм полного перебора строки для поиска подстроки.
     Параметры:
@@ -13,3 +13,4 @@ def bruteforce_search(string, substring):
         if string[i: i + substr_len] == substring:
             return True
     return False
+

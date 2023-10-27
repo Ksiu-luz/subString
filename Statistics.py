@@ -5,6 +5,7 @@ import Aho_Corasick_search
 import Bruteforce_search
 import KMP_search
 import Rabin_Karp_search
+import BMX_search
 
 
 def get_data(method):
@@ -66,7 +67,7 @@ def get_graph(method):
 
 def graphs():
     k = 1
-    for module in [Bruteforce_search, Aho_Corasick_search, Rabin_Karp_search, KMP_search]:
+    for module in [Bruteforce_search, Aho_Corasick_search, Rabin_Karp_search, KMP_search, BMX_search]:
         # График времени
         x, y = get_data(module.search)
         plt.subplot(5, 2, k)

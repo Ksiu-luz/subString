@@ -6,6 +6,14 @@ import Bruteforce_search
 import KMP_search
 import Rabin_Karp_search
 import BMX_search
+import string
+import random
+
+
+def generate_random_string(length):
+    letters = string.ascii_lowercase
+    rand_string = ''.join(random.choice(letters) for _ in range(length))
+    return rand_string
 
 
 def get_data(method):
@@ -22,8 +30,10 @@ def get_data(method):
         k = 0
         summ = 0
         for j in range(1, i, 10000):
+            spam = generate_random_string(i)
+            eggs = generate_random_string(j)
             start = time.time()
-            method('a' * i, 'a' * j + 'b')
+            method(spam, eggs)
             end = time.time()
             summ += ((end - start) * 10 ** 3)
             k += 1
@@ -39,8 +49,10 @@ def get_memory(method):
         k = 0
         summ = 0
         for j in range(1, i, 1000):
+            spam = generate_random_string(i)
+            eggs = generate_random_string(j)
             tracemalloc.start()
-            method('a' * i, 'a' * j + 'b')
+            method(spam, eggs)
             summ += tracemalloc.get_traced_memory()[1]
             k += 1
         x.append(i)
